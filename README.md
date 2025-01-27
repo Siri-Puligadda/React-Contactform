@@ -1,50 +1,21 @@
 # React + TypeScript + Vite
+- npm i
+- npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+create a simple React application called "Contact Form" that collects user information and displays it below the form upon submission. This task will help you practice handling form inputs, validation, and conditional rendering in React.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Requirements
+1. **Form Structure:**
+   - The form should have the following fields:
+     - Name: Text input for the user's name.
+     - Email: Text input for the user's email address.
+     - Message: Textarea for the user's message.
+2. **Form Submission:**
+   - There should be a "Submit" button to submit the form.
+3. **Form Validation:**
+   - Validate that none of the fields are empty upon submission.
+   - If any field is empty, display an error message: "All fields are required." The form should not be submitted.
+4. **Displaying Submitted Data:**
+   - If the form is successfully submitted, display the entered information below the form.
+   - Clear the input fields after a successful submission.
